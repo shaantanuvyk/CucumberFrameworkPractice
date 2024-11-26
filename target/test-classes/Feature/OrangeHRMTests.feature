@@ -12,7 +12,6 @@ Given User is on the Login page
 When User is trying to login with blank credentials using "" and ""
 Then Error message displays as "Required" under username and password textboxes
 
-
 @SanityTest
 Scenario Outline: Login with Invalid credentials
 Given User is on the Login page
@@ -22,8 +21,8 @@ Then Error message displays as "Invalid credentials"
 Examples:
 
 |userName|password|
-|Admin|aaa
-|aaa|admin123
+|Admin|aaa|
+|aaa|admin123|
 
 
 @SmokeTest @SanityTest
@@ -32,6 +31,7 @@ Given User is on the Login page
 When User is trying to login with valid credentials using "username" and "password"
 Then User gets login successfully on "Dashboard" page
       
+
       
       
       
