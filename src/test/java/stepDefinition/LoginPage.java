@@ -18,33 +18,12 @@ import resource.Utils;
 public class LoginPage extends Utils
 {
 	public static WebDriver driver;
-	@Given("User has selected the {string} browser")
-	public void user_has_selected_the_browser(String broswer) 
-	{
-		BrowserSelection(broswer);
-	}
-
-	@When("User is navigated to the {string}")
-	public void user_is_navigated_to_the(String url) throws IOException 
-	{
-		driver=Utils.driver;
-		driver.get(getPropties(url));
-		String currentURL = driver.getCurrentUrl();
-		assertEquals(getPropties(url), currentURL);
-		
-	}
-
-	@Then("Login page is loaded")
-	public void login_page_is_loaded() throws IOException 
-	{
-	    String loginPage = driver.findElement(By.cssSelector("h5.orangehrm-login-title")).getText();
-	    assertEquals("Login", loginPage);
-	}
-
+	
 	@Given("User is on the Login page")
 	public void user_is_on_the_login_page() throws IOException 
 	{
-		login_page_is_loaded();
+		String loginPage = driver.findElement(By.cssSelector("h5.orangehrm-login-title")).getText();
+	    assertEquals("Login", loginPage);
 	}
 
 	@When("User is trying to login with blank credentials using {string} and {string}")

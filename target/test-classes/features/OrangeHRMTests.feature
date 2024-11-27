@@ -1,10 +1,10 @@
 @LoginTest
 Feature: All Login Scenarios
 
-Background: Navigate on the application and choose the browser
-Given User has selected the "Chrome" browser
-When User is navigated to the "OrangeHRMURL"
-Then Login page is loaded
+#Background: Navigate on the application and choose the browser
+#Given User has selected the "Chrome" browser
+#When User is navigated to the "OrangeHRMURL"
+#Then Login page is loaded
 
 @RegressionTest
 Scenario: Login With Blank credentials
