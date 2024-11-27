@@ -31,25 +31,3 @@ Given User is on the Login page
 When User is trying to login with valid credentials using "username" and "password"
 Then User gets login successfully on "Dashboard" page
       
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      

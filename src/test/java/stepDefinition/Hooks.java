@@ -12,18 +12,17 @@ import resource.Utils;
 
 public class Hooks extends Utils
 {
-	public static WebDriver driver;
-	
-	@Before
-	public void BrowserLaunching() throws IOException
-	{
+	public WebDriver driver;
+	@Before("@LoginTest")
+	public void  BrowserLaunching() throws IOException
+	{	
 		BrowserSelection(getPropties("browser"));
-		driver.get(getPropties("OrangeHRMURL"));
 	}
 	
-	@After
+	@After("@LoginTest")
 	public void BrowserClosing()
 	{
+		driver=Utils.driver;
 		driver.quit();
 	}
 }

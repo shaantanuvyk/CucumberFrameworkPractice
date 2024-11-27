@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Utils 
 {
 	public static WebDriver driver; 
-	public WebDriver BrowserSelection(String browserName)
+	public WebDriver BrowserSelection(String browserName) throws IOException
 	{
 		if(browserName.equalsIgnoreCase("Chrome")||browserName.equalsIgnoreCase("Google Chrome"))
 		{

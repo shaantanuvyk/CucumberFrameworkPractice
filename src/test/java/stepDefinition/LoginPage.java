@@ -22,6 +22,8 @@ public class LoginPage extends Utils
 	@Given("User is on the Login page")
 	public void user_is_on_the_login_page() throws IOException 
 	{
+		driver=Utils.driver;
+		driver.get(getPropties("OrangeHRMURL"));
 		String loginPage = driver.findElement(By.cssSelector("h5.orangehrm-login-title")).getText();
 	    assertEquals("Login", loginPage);
 	}
