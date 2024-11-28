@@ -13,13 +13,13 @@ import resource.Utils;
 public class Hooks extends Utils
 {
 	public WebDriver driver;
-	@Before("@LoginTest")
+	@Before
 	public void  BrowserLaunching() throws IOException
 	{	
 		BrowserSelection(getPropties("browser"));
 	}
 	
-	@After("@LoginTest")
+	@After
 	public void BrowserClosing()
 	{
 		driver=Utils.driver;
