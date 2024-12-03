@@ -25,7 +25,7 @@ Examples:
 |aaa|admin123|
 
 
-@SmokeTest @SanityTest
+@ValidLoginTest
 Scenario: Login with Valid Credentials
 Given User is on the Login page
 When User is trying to login with valid credentials using "username" and "password"

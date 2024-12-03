@@ -1,6 +1,5 @@
 package resource;
 
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
@@ -20,6 +19,7 @@ public class Utils
 		{
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\ACER\\Desktop\\Shantanu Karambalkar\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 			driver= new ChromeDriver();
+			driver.get(getPropties("OrangeHRMURL"));
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			
