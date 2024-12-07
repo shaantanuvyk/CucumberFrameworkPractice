@@ -18,9 +18,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/test/resources/Feature/AddUser.feature",
+		features="src/test/resources/Feature",
 		glue={"stepDefinition"},
-		//tags="@RegressionTest",
+		tags="@SmokeTest or @SanityTest",
 		plugin ={"pretty","html:target/cucumber-reports.html"}, //pretty report gets generated in the local folder (Target location)
 		monochrome = true,
 		publish = true //Publish report on the cucumber.io server, the link gets generated in the console
