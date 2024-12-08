@@ -20,6 +20,7 @@ import resource.Utils;
 public class Hooks extends Utils
 {
 	public WebDriver driver;
+	Scenario scenarioName;
 	
 	@Before(order=0)
 	public void  BrowserLaunching() throws IOException
@@ -42,10 +43,11 @@ public class Hooks extends Utils
 	}
 	
 	@After()
-	public void takeScreenshot(Scenario scenario) throws IOException
+	public void screenshot(Scenario scenario) throws IOException
 	{
 		if(scenario.isFailed())
 		{
+			driver=Utils.driver;
 			File image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(image, new File("C:\\Users\\ACER\\Desktop\\Screenshots\\"+scenario.getName()+".jpg"));
 		}

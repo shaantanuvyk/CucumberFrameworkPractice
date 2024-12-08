@@ -1,18 +1,25 @@
 package resource;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.cucumber.plugin.event.Node.Scenario;
+
 public class Utils 
 {
 	public static WebDriver driver; 
+	public Scenario scenarioName;
 	public WebDriver BrowserSelection(String browserName) throws IOException
 	{
 		if(browserName.equalsIgnoreCase("Chrome")||browserName.equalsIgnoreCase("Google Chrome"))
@@ -50,4 +57,10 @@ public class Utils
 		return prop.getProperty(value);
 		
 	}
+	
+	public void takeScreenShot(Scenario scenario) throws IOException
+	{
+		
+	}
+	
 }
